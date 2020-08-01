@@ -27,7 +27,7 @@
 			<td>Nombre animal:</td>
 			<td> <input type='text' name='nombre' value='<?php echo $animal->getNombre()?>'></td>
 		</tr>
-		<input type='hidden' name='actualizar' value'actualizar'>
+		<input type='hidden' name='actualizar' value='actualizar'>
 	</table>
 	<input type='submit' value='Guardar'>
 	<a href="index.php">Volver</a>
