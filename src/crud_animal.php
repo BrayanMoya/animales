@@ -1,6 +1,8 @@
 <?php
 // incluye la clase Db
 require_once('conexion.php');
+
+const NOMBRE = "nombre";
  
 	class CrudAnimal{
 		
@@ -11,7 +13,7 @@ require_once('conexion.php');
 		public function insertar($animal){
 			$db=Db::conectar();
 			$insert=$db->prepare('INSERT INTO animales values(NULL,:nombre)');
-			$insert->bindValue('nombre',$animal->getNombre());
+			$insert->bindValue(NOMBRE,$animal->getNombre());
 			$insert->execute();
  
 		}
@@ -25,7 +27,7 @@ require_once('conexion.php');
 			foreach($select->fetchAll() as $animal){
 				$myanimal= new Animal();
 				$myanimal->setId($animal['id']);
-				$myanimal->setNombre($animal['nombre']);
+				$myanimal->setNombre($animal[NOMBRE]);
 				$listaanimales[]=$myanimal;
 			}
 			return $listaanimales;
@@ -56,7 +58,7 @@ require_once('conexion.php');
 			$db=Db::conectar();
 			$actualizar=$db->prepare('UPDATE animales SET nombre=:nombre WHERE ID=:id');
 			$actualizar->bindValue('id',$animal->getId());
-			$actualizar->bindValue('nombre',$animal->getNombre());
+			$actualizar->bindValue(NOMBRE,$animal->getNombre());
 			$actualizar->execute();
 		}
 	}
