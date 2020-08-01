@@ -6,6 +6,7 @@ require_once('animal.php');
 $crud= new CrudAnimal();
 $animal= new Animal();
 define("LOCINDEX", "Location: index.php");
+define("LOCVERANIMAL", "Location: mostrar.php");
  
 	// si el elemento insertar no viene nulo llama al crud e inserta un animal
 	if (isset($_POST['insertar'])) {
@@ -22,7 +23,7 @@ define("LOCINDEX", "Location: index.php");
 	// si la variable accion enviada por GET es == 'e' llama al crud y elimina un animal
 	}elseif ($_GET['accion']=='e') {
 		$crud->eliminar($_GET['id']);
-		header(LOCINDEX);		
+		header(LOCVERANIMAL);		
 	// si la variable accion enviada por GET es == 'a', envía a la página actualizar.php 
 	}elseif($_GET['accion']=='a'){
 		header('Location: actualizar.php');
