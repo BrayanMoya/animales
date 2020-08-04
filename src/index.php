@@ -21,9 +21,6 @@
 			<tr>
 				<td><a href="mostrar.php">Ver</a></td>
 			</tr>
-			<tr>
-				<td><a href=""> Boton prueba 2</a></td>
-			</tr>
 		</table>
 		<footer>
 			Administrar Animal 2019
