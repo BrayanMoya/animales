@@ -22,7 +22,10 @@
 				<td><a href="mostrar.php">Ver</a></td>
 			</tr>
 			<tr>
-			<td><a href="">Boton prueba</a></td>
+				<td><a href="">Boton prueba</a></td>
+			</tr>
+			<tr>
+				<td><a href="">Boton prueba 2</a></td>
 			</tr>
 		</table>
 		<footer>
