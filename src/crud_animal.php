@@ -2,7 +2,7 @@
 // incluye la clase Db
 require_once('conexion.php');
 
-const NOMBRE = 'nombre'
+const NOMBRE = 'nombre';
  
 	class CrudAnimal{
 		
@@ -62,4 +62,3 @@ const NOMBRE = 'nombre'
 			$actualizar->execute();
 		}
 	}
-?>
