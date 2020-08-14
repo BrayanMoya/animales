@@ -23,7 +23,7 @@ define("LOCVERANIMAL", "Location: mostrar.php");
 	// si la variable accion enviada por GET es == 'e' llama al crud y elimina un animal
 	}elseif ($_GET['accion']=='e') {
 		$crud->eliminar($_GET['id']);
-		header(LOCVERANIMAL);		
+		header(LOCINDEX);		
 	// si la variable accion enviada por GET es == 'a', envía a la página actualizar.php 
 	}elseif($_GET['accion']=='a'){
 		header('Location: actualizar.php');
